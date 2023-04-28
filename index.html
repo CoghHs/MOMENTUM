@@ -4,16 +4,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MOMENTUM</title>
     <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
+    <h2 id="clock">00:00:00</h2>
     <form class="hidden" id="login-form">
         <input type="text" placeholder="what is your name ?" required>
         <input type="submit" value="Log In">
     </form>
-    <h2 id="clock">00:00:00</h2>
     <h1 id="greeting" class="hidden"></h1>
+    <form id="todo-form">
+        <input type="text" placeholder="Write a To Do and Press Enter" required>
+    </form>
+    <ul id="todo-list"></ul>
     <div id="quote">
         <span></span>
         <span></span>
