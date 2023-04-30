@@ -2,6 +2,7 @@ const toDoForm = document.getElementById("todo-form");
 const toDoInput = toDoForm.querySelector("input");
 const toDoList = document.getElementById("todo-list");
 
+
 const TODOS_KEY = "todos";
 
 let toDos = [];
@@ -23,12 +24,16 @@ function paintToDo(newTodo) {
     const span = document.createElement("span");
     span.innerText = newTodo.Text;
     const button = document.createElement("button");
-    button.innerText = "❌";
+    button.innerText = "del";
     button.addEventListener("click", deleteToDo);
     li.appendChild(span);
     li.appendChild(button);
     toDoList.appendChild(li);
-}
+    setTimeout(() => {
+        li.classList.add("fade-in");
+    }, 0);
+    saveToDos();
+    }
 
 function handleToDoSubmit(event) {
     event.preventDefault();

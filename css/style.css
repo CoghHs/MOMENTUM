@@ -1,30 +1,195 @@
-@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap');
 @import "img.css";
+@import "variables.css";
 
 .hidden {
     display: none;
 }
 
 body {
-    font-family: 'Frank Ruhl Libre', serif;
+    font-family: 'Nunito', sans-serif;
     color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    background-color: #ffffff56;
+    font-size: 25px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: 50px;
+    animation: blureffect 2s ease-in-out infinite;
+}
+
+button:hover {
+    background-color: #ffffffa2;
+    animation: none;
+    color: rgb(54, 54, 54);
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
 }
 
 header {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+    padding: 10px 15px;
+    font-size: 20px;
 }
+
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 300px;
+    height: 100vh;
+    flex-grow: 1;
+    margin-top: 30px;
+}
+
+.quote-wrapper {
+    font-weight: 600;
 }
 
 #clock {
     font-size: 10rem;
     margin: 0 auto;
     font-weight: 600;
+    text-align: center;
+    animation: clockeff 2s ease-in-out infinite;
+}
+
+#clock:hover {
+    transform: scale(1.5);
+    transition: all 0.5s ease-in-out;
+}
+
+
+@keyframes blureffect {
+        0% {
+        box-shadow: 0px 10px 20px #fcfbfb56;
+    }
+    30% {
+        box-shadow: 10px 0px 20px #ffffff56;
+    }
+    70% {
+        box-shadow: -5px -10px 20px #ffffff56; 
+    }
+    100% {
+        box-shadow: 0px 10px 20px #ffffff56;
+    }
+}
+
+@keyframes clockeff {
+    0% {
+        text-shadow: 0px 10px 20px #ffffff56;
+    }
+    30% {
+        text-shadow: 10px 0px 20px #ffffff56;
+    }
+    70% {
+        text-shadow: -5px -10px 20px #ffffff56; 
+    }
+    100% {
+        text-shadow: 0px 10px 20px #ffffff56;
+    }
+}
+
+#greeting {
+    font-size: 60px;
+    margin-top: -10px;
+}
+
+.login-form__login {
+    width: 600px;
+    height: 80px;
+    border: none;
+    border-bottom: 4px solid white;
+    background-color: transparent;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+
+.login-form__login:focus {
+    outline: none;
+    background-color: #ffffff56;
+    border-radius: 80px;
+    transition: all 0.3s ease-in-out;
+}
+
+.login-form__login::placeholder {
+    color: var(--gray);
+    font-size: 40px;
+    text-align: center;
+}
+
+
+.login-form__btn {
+    border: none;
+    background-color: transparent;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.login-form__btn:hover {
+    font-size: 50px;
+    transition: all 0.2s ease-in-out;
+}
+
+#todo-list li {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#todo-list li.fade-in {
+    opacity: 1;
+}
+
+.todo-form__text {
+    width: 600px;
+    height: 60px;
+    border: none;
+    background-color: transparent;
+    border-radius: 80px;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.todo-form__text:hover {
+    background-color: #ffffff56;
+    transition: all 0.2s ease-in-out;
+}
+
+.todo-form__text:focus {
+    outline: none;
+}
+
+.todo-form__text::placeholder{
+    color: var(--gray);
+    font-size: 30px;
+    text-align: center;
 }
