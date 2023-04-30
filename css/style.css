@@ -80,12 +80,6 @@ main {
     animation: clockeff 2s ease-in-out infinite;
 }
 
-#clock:hover {
-    transform: scale(1.5);
-    transition: all 0.5s ease-in-out;
-}
-
-
 @keyframes blureffect {
         0% {
         box-shadow: 0px 10px 20px #fcfbfb56;
